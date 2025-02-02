@@ -6,8 +6,9 @@ Question Name: _New World, New World!_
 - **Key**: `actf{e7_7u_bru73_t73_s1nk1Ngd0m}`
 
 ## Metadata
-- Author: [Roonil03](https://github.com/Roonil03)
-- File: `ZIP.zip` (contains `brutus.txt`)
+- **Tags**: `Cryptography`
+- **Author**: [Roonil03](https://github.com/Roonil03)
+- **File**: `ZIP.zip` (contains `brutus.txt`)
 
 ## Solution
 - The encoded text file has data encoded in a binary format.
