@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidding Portal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: lightblue;
+            padding: 10px;
+            text-align: left;
+        }
+        h2 {
+            margin: 0;
+            color: black;
+            padding-left: 20px; 
+        }
+        .white-space {
+            height: 20px;
+            background-color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: left;
+            padding: 20px;
+            background-color: lightblue; 
+            border: 5px solid darkblue; 
+        }
+        .left {
+            flex: 1;
+            padding-right: 20px;
+            background-color: lightblue; 
+            padding: 20px;
+            width: 50%; 
+            height: 100%;
+        }
+        .left img {
+            width: 100%; 
+            max-width: 1000px; 
+            height: auto;
+            border: 2px solid #000;
+        }
+        .right {
+            flex: 1;
+            padding-left: 20px;
+            margin-top: 0;
+            position: relative;
+        }
+        .right h3 {
+            font-size: 40px; 
+            color: maroon;
+            margin: 0;
+        }
+        .right p {
+            font-size: 24px; 
+            color: darkblue;
+            margin-top: 10px; 
+            font-family: Georgia, serif; 
+            padding-left: 20px; 
+        }
+        .buy-button {
+            font-size: 24px; 
+            color: white;
+            background-color: darkblue;
+            border: none;
+            padding: 15px 30px; 
+            cursor: pointer;
+            margin-left: 20px;
+            border-radius: 20px;
+        }
+        .buy-button:hover {
+            background-color: #555;
+        }
+        .end-time {
+            font-size: 20px; 
+            color: darkred; 
+            margin-top: 10px; 
+            padding-left: 20px; 
+            font-family: 'Times New Roman', Times, serif; 
+        }
+        .end-time span {
+            font-weight: bold; 
+            color: #8B0000; 
+        }
+        .buy-italic {
+            font-style: italic; 
+        }
+        .additional-info {
+            font-size: 20px;
+            color: darkgreen; 
+            margin-top: 10px;
+            padding-left: 20px; 
+            font-family: 'Arial', sans-serif;
+        }
+        .history {
+            font-size: 20px;
+            color: darkgreen; 
+            margin-top: 10px;
+            padding-left: 20px; 
+            font-family: 'Arial', sans-serif;
+        }
+        .history .bid-count {
+            font-weight: bold;
+            color: red; 
+        }
+        .highlight {
+            font-size: 100px; 
+            font-weight: bold;
+            color: crimson;
+        }
+        .form-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+        }
+        .form-container label {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .form-container input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        // Initialize the counter
+        let counterObfuscated = 0;
+
+        // Define a dynamic secret number
+        const secretTarget = Math.floor(Math.sqrt(900)) + Math.log10(1000) * 5; // Evaluates to 30
+
+        // Unnecessary distraction variables
+        let irrelevantFactor1 = Math.random() * 42;
+        let irrelevantFactor2 = 0;
+
+        // Function that runs on button click
+        function handleButtonClick() {
+            // Increment counter
+            counterObfuscated++;
+
+            // Simulate irrelevant logic
+            if (counterObfuscated % 3 === 0) {
+                irrelevantFactor2 += irrelevantFactor1 * counterObfuscated;
+            }
+
+            // Check for the hidden click count
+            if (counterObfuscated === secretTarget) {
+                alert("actf{A. Witwicky}");
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <h2>Rare Antique Eye Glasses</h2>
+    </nav>
+
+    <div class="white-space"></div>
+
+    <div class="container">
+        <div class="left">
+            <img src="../static/image.jpeg" alt="Antique Glasses">
+        </div>
+        <div class="right">
+            <h3>LadiesMan217</h3>
+            <p class="buy-italic" style="font-size: 30px">
+                Buy it now price: &emsp;&emsp;&emsp;&emsp;&emsp; Rs/- 26000&emsp;
+                <button class="buy-button" onclick="handleButtonClick()">Buy it now</button>
+            </p>
+            <br><br>
+            <p class="end-time" style="font-size: 30px">End time: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>6 days 18 hrs</span> (29-01-25 11:19:37 PDT)</p>
+            <p class="shipping-cost" style="font-size: 30px">Shipping costs:&emsp;&emsp;&emsp;&emsp; Rs/- 4500</p>
+            <br><br>
+            <p class="additional-info" style="font-size: 30px">Ships to: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; International</p>
+            <p class="additional-info" style="font-size: 30px">Item location: &emsp;&emsp;&emsp;&emsp; Manipal </p>
+            <p class="additional-info" style="font-size: 30px">Quantity:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 1 available</p>
+            <p class="history" style="font-size: 30px;">History: <span class="highlight">&emsp;&emsp;0 BIDS</span></p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form method="POST" action="/">
+            <label for="username">Bidder Name:</label>
+            <input type="text" id="username" name="username" placeholder="Enter bidder name" required>
+    
+            <label for="bid">Bid Amount:</label>
+            <input type="text" id="bid" name="bid" placeholder="Enter bid amount" required>
+    
+            <button type="submit" class="buy-button">Submit Bid</button>
+        </form>
+    </div>
+</body>
+</html>
