@@ -7,7 +7,7 @@
 
 ## Metadata
 - **Tags**: `OSINT`, `Cryptography`
-- **Author**: Anoushka
+- **Author**: [Anoushka](https://github.com/minnieG12)
 - **File**: `ZIP.zip`
 
 ## Solution Approach
