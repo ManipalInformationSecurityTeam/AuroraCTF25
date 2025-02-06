@@ -7,7 +7,7 @@ Question Name: `ED1TH_HON3_D3N`
 
 ## Metadata
 - **Tags**: `Cryptography`, `Forensics`
-- **Author**: Asmita Guha
+- **Author**: [Asmita Guha](https://github.com/minnieG12)
 - **File**: `ZIP.zip`
 
 ## Solution Approach

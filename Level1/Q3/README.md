@@ -7,7 +7,7 @@
 
 ## Metadata
 - **Tags**: `Audio`, `Cryptography`
-- **Author**: Asmita Guha
+- **Author**: [Asmita Guha](https://github.com/minnieG12)
 - **File**: `ZIP.zip`
 
 ## Solution Approach
