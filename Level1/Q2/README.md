@@ -7,7 +7,7 @@
 
 ## Metadata
 - **Tags**: `Forensics`, `Cryptography`
-- **Author**: [Anoushka]()
+- **Author**: [Anoushka](https://github.com/anoushkaghosh231)
 - **File**: `ZIP.zip`, which contains `q2img.png`
 
 ## Solution Approach
